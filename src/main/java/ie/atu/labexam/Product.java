@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
+    @Positive(message = "Must be positive")
+    private int productCode;
     @NotBlank(message="Must enter product name")
-    private String productCode;
-    @NotBlank(message="Must enter product name") @Max(value=100, message="Too many characters")
     private String productName;
     @NotBlank(message="Must enter a category")
     private String category;
