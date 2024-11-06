@@ -27,4 +27,9 @@ public class ProductController {
     public List<Product> updateProduct(@Valid @RequestBody Product product, @PathVariable int productCode){
         return myProduct.updateProduct(product, productCode);
     }
+
+    @DeleteMapping("/products/{productCode}")
+    public List<Product> deleteProduct(@PathVariable int productCode){
+        return myProduct.deleteProduct(productCode);
+    }
 }

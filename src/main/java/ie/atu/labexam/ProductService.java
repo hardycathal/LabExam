@@ -30,4 +30,13 @@ public class ProductService {
             }
         }throw new NoSuchElementException("Product with product code: " + productCode + " not found.");
     }
+
+    public List<Product> deleteProduct(int productCode){
+        for (Product p : myList){
+            if(p.getProductCode() == productCode){
+                myList.remove(p);
+                return myList;
+            }
+        }throw new NoSuchElementException("Product with product code: " + productCode + " not found.");
+    }
 }
