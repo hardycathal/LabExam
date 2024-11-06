@@ -22,4 +22,9 @@ public class ProductController {
     public List<Product> getProducts(@PathVariable int productCode){
         return myProduct.getProducts(productCode);
     }
+
+    @PutMapping("/products/{productCode}")
+    public List<Product> updateProduct(@Valid @RequestBody Product product, @PathVariable int productCode){
+        return myProduct.updateProduct(product, productCode);
+    }
 }
