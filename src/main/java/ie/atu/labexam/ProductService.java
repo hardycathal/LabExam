@@ -15,8 +15,12 @@ public class ProductService {
         return myList;
     }
 
-    public List<Product> getProducts(int productCode){
-        return myList;
+    public Product getProducts(int productCode){
+        for (Product p : myList){
+            if(p.getProductCode() == productCode){
+                return p;
+            }
+        }throw new NoSuchElementException("Product with product code: " + productCode + " not found.");
     }
 
     public List<Product> updateProduct(Product product, int productCode){

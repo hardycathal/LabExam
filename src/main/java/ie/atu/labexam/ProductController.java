@@ -19,7 +19,7 @@ public class ProductController {
     }
 
     @GetMapping("/products/{productCode}")
-    public List<Product> getProducts(@PathVariable int productCode){
+    public Product getProducts(@PathVariable int productCode){
         return myProduct.getProducts(productCode);
     }
 
